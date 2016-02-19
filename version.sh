@@ -4,7 +4,7 @@ ARCH=$(uname -m)
 
 config="multi_v7_defconfig"
 
-build_prefix="armv7-devel-r"
+build_prefix="dm81xx"
 branch_prefix="v"
 branch_postfix=".x"
 
@@ -23,14 +23,14 @@ toolchain="gcc_linaro_gnueabihf_5"
 #toolchain="gcc_linaro_aarch64_gnu_5"
 
 #Kernel/Build
-KERNEL_REL=4.5
-KERNEL_TAG=${KERNEL_REL}-rc4
-BUILD=${build_prefix}47
+KERNEL_REL=4.4
+KERNEL_TAG=${KERNEL_REL}.2
+BUILD=${build_prefix}
 kernel_rt=".X-rtY"
 
 #v4.X-rcX + upto SHA
-prev_KERNEL_SHA="18558cae0272f8fd9647e69d3fec1565a7949865"
-KERNEL_SHA="65c23c65bee479faceb042a52f5a7278dfa8d972"
+#prev_KERNEL_SHA="18558cae0272f8fd9647e69d3fec1565a7949865"
+#KERNEL_SHA="65c23c65bee479faceb042a52f5a7278dfa8d972"
 
 #git branch
 #BRANCH="${branch_prefix}${KERNEL_REL}${branch_postfix}"

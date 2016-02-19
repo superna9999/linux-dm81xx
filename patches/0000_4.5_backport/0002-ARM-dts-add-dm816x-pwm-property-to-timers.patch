@@ -1,0 +1,54 @@
+From 8ca31dbf67b3ad65b629e8185086050fa6b29dbc Mon Sep 17 00:00:00 2001
+From: Neil Armstrong <narmstrong@baylibre.com>
+Date: Thu, 12 Nov 2015 15:07:40 +0100
+Subject: [PATCH] ARM: dts: add dm816x pwm property to timers
+
+Adds ti,timer-pwm property to timers 4 to 7 to permit usage of their
+PWM output fonctionnality via the dmtimer driver.
+
+Cc: Brian Hutchinson <b.hutchman@gmail.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+Signed-off-by: Tony Lindgren <tony@atomide.com>
+---
+ arch/arm/boot/dts/dm816x.dtsi | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm/boot/dts/dm816x.dtsi b/arch/arm/boot/dts/dm816x.dtsi
+index 3c99cfa..342e37d 100644
+--- a/arch/arm/boot/dts/dm816x.dtsi
++++ b/arch/arm/boot/dts/dm816x.dtsi
+@@ -319,6 +319,7 @@
+ 			reg = <0x48044000 0x2000>;
+ 			interrupts = <92>;
+ 			ti,hwmods = "timer4";
++			ti,timer-pwm;
+ 		};
+ 
+ 		timer5: timer@48046000 {
+@@ -326,6 +327,7 @@
+ 			reg = <0x48046000 0x2000>;
+ 			interrupts = <93>;
+ 			ti,hwmods = "timer5";
++			ti,timer-pwm;
+ 		};
+ 
+ 		timer6: timer@48048000 {
+@@ -333,6 +335,7 @@
+ 			reg = <0x48048000 0x2000>;
+ 			interrupts = <94>;
+ 			ti,hwmods = "timer6";
++			ti,timer-pwm;
+ 		};
+ 
+ 		timer7: timer@4804a000 {
+@@ -340,6 +343,7 @@
+ 			reg = <0x4804a000 0x2000>;
+ 			interrupts = <95>;
+ 			ti,hwmods = "timer7";
++			ti,timer-pwm;
+ 		};
+ 
+ 		uart1: uart@48020000 {
+-- 
+1.9.1
+

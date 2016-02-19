@@ -51,31 +51,8 @@ config_comparsion () {
 	make ARCH=${KERNEL_ARCH} CROSS_COMPILE="${CC}" "${config}"
 	cp -v .config "${DIR}/patches/ref_${config}"
 
-	ref_config="imx_v6_v7_defconfig"
-	config_reference
-
 	ref_config="omap2plus_defconfig"
 	config_reference
-
-	ref_config="sunxi_defconfig"
-	config_reference
-
-	ref_config="tegra_defconfig"
-	config_reference
-
-	clear
-	echo "Updating: defconfig-lpae"
-	echo "-----------------------------"
-	cp "${DIR}/patches/defconfig-lpae" .config
-	make ARCH=${KERNEL_ARCH} CROSS_COMPILE="${CC}" oldconfig
-	cp .config "${DIR}/patches/defconfig-lpae"
-
-	clear
-	echo "Updating: defconfig-bone"
-	echo "-----------------------------"
-	cp "${DIR}/patches/defconfig-bone" .config
-	make ARCH=${KERNEL_ARCH} CROSS_COMPILE="${CC}" oldconfig
-	cp .config "${DIR}/patches/defconfig-bone"
 
 	clear
 	echo "Updating: defconfig"

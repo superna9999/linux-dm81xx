@@ -1,0 +1,29 @@
+From 727535fd2032985c987a34b7e5853512424237d5 Mon Sep 17 00:00:00 2001
+From: Neil Armstrong <narmstrong@baylibre.com>
+Date: Thu, 12 Nov 2015 15:07:45 +0100
+Subject: [PATCH] ARM: dts: remove dm816x invalid DT l3_main hwmod
+
+Remove invalid l3_main hwmod entry from dm816x DT ocp node.
+
+Cc: Brian Hutchinson <b.hutchman@gmail.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+Signed-off-by: Tony Lindgren <tony@atomide.com>
+---
+ arch/arm/boot/dts/dm816x.dtsi | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/arch/arm/boot/dts/dm816x.dtsi b/arch/arm/boot/dts/dm816x.dtsi
+index 342e37d..2fde534 100644
+--- a/arch/arm/boot/dts/dm816x.dtsi
++++ b/arch/arm/boot/dts/dm816x.dtsi
+@@ -64,7 +64,6 @@
+ 		#address-cells = <1>;
+ 		#size-cells = <1>;
+ 		ranges;
+-		ti,hwmods = "l3_main";
+ 
+ 		prcm: prcm@48180000 {
+ 			compatible = "ti,dm816-prcm";
+-- 
+1.9.1
+

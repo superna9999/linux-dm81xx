@@ -1,0 +1,32 @@
+From 8c0cabd7970c0d50d53bf795b1a0f6f570b19437 Mon Sep 17 00:00:00 2001
+From: Neil Armstrong <narmstrong@baylibre.com>
+Date: Thu, 22 Oct 2015 11:18:53 +0200
+Subject: [PATCH] ARM: OMAP: add DT support for ti,dm816-timer
+
+Adds ti,dm816-timer to the dmtimer OF match table.
+
+Cc: Brian Hutchinson <b.hutchman@gmail.com>
+Signed-off-by: Neil Armstrong <narmstrong@baylibre.com>
+Signed-off-by: Tony Lindgren <tony@atomide.com>
+---
+ arch/arm/plat-omap/dmtimer.c | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/arch/arm/plat-omap/dmtimer.c b/arch/arm/plat-omap/dmtimer.c
+index 7c7f260..1600612 100644
+--- a/arch/arm/plat-omap/dmtimer.c
++++ b/arch/arm/plat-omap/dmtimer.c
+@@ -972,6 +972,10 @@ static const struct of_device_id omap_timer_match[] = {
+ 		.compatible = "ti,am335x-timer-1ms",
+ 		.data = &omap3plus_pdata,
+ 	},
++	{
++		.compatible = "ti,dm816-timer",
++		.data = &omap3plus_pdata,
++	},
+ 	{},
+ };
+ MODULE_DEVICE_TABLE(of, omap_timer_match);
+-- 
+1.9.1
+
