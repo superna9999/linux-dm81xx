@@ -229,7 +229,7 @@ config="CONFIG_NFC_MICROREAD_I2C" ; config_module
 config="CONFIG_DEVTMPFS_MOUNT" ; config_enable
 
 config="CONFIG_FIRMWARE_IN_KERNEL" ; config_enable
-config="CONFIG_EXTRA_FIRMWARE" ; option="am335x-pm-firmware.elf am335x-bone-scale-data.bin am335x-evm-scale-data.bin am43x-evm-scale-data.bin" ; config_string
+#config="CONFIG_EXTRA_FIRMWARE" ; option="am335x-pm-firmware.elf am335x-bone-scale-data.bin am335x-evm-scale-data.bin am43x-evm-scale-data.bin" ; config_string
 config="CONFIG_EXTRA_FIRMWARE_DIR" ; option="firmware" ; config_string
 
 config="CONFIG_DMA_CMA" ; config_enable
