@@ -169,7 +169,7 @@ make_dtbs_pkg () {
 	make_pkg
 }
 
-/bin/sh -e "${DIR}/tools/host_det.sh" || { exit 1 ; }
+#/bin/sh -e "${DIR}/tools/host_det.sh" || { exit 1 ; }
 
 if [ ! -f "${DIR}/system.sh" ] ; then
 	cp -v "${DIR}/system.sh.sample" "${DIR}/system.sh"
